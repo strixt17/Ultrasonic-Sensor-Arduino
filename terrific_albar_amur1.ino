@@ -45,25 +45,25 @@ void loop()
   lcd.print("Distance: " + String(distance) + " cm");
   
   if (distance <= 100){
-  	digitalWrite(redPin, 252);
+    digitalWrite(redPin, 252);
     digitalWrite(greenPin, 0);
     digitalWrite(bluePin, 0);
     lcd.setCursor(0, 1);
     lcd.print("Too Close         ");
   }
   
-  if (distance >= 225) {
-  	digitalWrite(redPin, 0);
+  if (distance >= 175) {
+    digitalWrite(redPin, 0);
     digitalWrite(greenPin, 252);
     digitalWrite(bluePin, 0);
     lcd.setCursor(0, 1);
     lcd.print("Good Distance away");
   }
-  if (distance < 225 && distance > 100){
-  	digitalWrite(redPin, 252);
+  if (distance < 175 && distance > 100){
+    digitalWrite(redPin, 252);
     digitalWrite(greenPin, 252);
     digitalWrite(bluePin, 0);
-	lcd.setCursor(0, 1);
+  lcd.setCursor(0, 1);
     lcd.print("Go a bit further");
   }
   
